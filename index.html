@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Чисто2</title>
+  <link rel="stylesheet" href="css/app.css">
+  <script data-cfasync="false" id="ao_optimized_gfonts_config">WebFontConfig = {
+      google: {families: ["Rubik:300,400,500,600,700,800,900,300italic,400italic,500italic,600italic,700italic,800italic,900italic"]},
+      classes: false,
+      events: false,
+      timeout: 1500
+  };</script>
+  <script data-cfasync="false" id="ao_optimized_gfonts_webfontloader">(function() {
+      var wf = document.createElement('script');
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+  })();</script>
+</head>
+<body>
+<div id="app">
+  <div class="line1">
+    <span class="aqi" v-bind:class="[colorClass]">
+      <span class="aqi-number">{{aqi}}</span>
+      <span class="aqi-label">AQI</span>
+    </span>
+    <span class="header">
+      <span class="title" v-bind:class="[titleClass]">{{title}}</span>
+      <span class="description">{{description}}</span>
+    </span>
+  </div>
+  <div class="line2">
+    <div class="range-label color1-bg">0-50</div>
+    <div class="range-label color2-bg">50-100</div>
+    <div class="range-label color3-bg">100-150</div>
+    <div class="range-label color4-bg">150-200</div>
+    <div class="range-label color5-bg">200-300</div>
+    <div class="range-label color6-bg">300-500</div>
+  </div>
+  <div class="line3">
+    <span class="info-label">оновлено {{minutes}} хв тому</span>
+    <span class="info-label info-label-right">дані SaveEcoBot</span>
+  </div>
+</div>
+<script src="js/axios.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
